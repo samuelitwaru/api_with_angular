@@ -1,1 +1,17 @@
-<p>todos works!</p>
+<div class='container'>
+	<form (submit)='addTodos($event)'>
+		<input type="text" class='form-control' placeholder="action" name="action" [(ngModel)]='action' >
+
+		<button type="submit"><h4>Submit</h4></button>
+	</form>
+
+	<div *ngFor='let todo of todos'>
+		<div class='container'>
+			<p (click)='updateStatus(todo)' [(ngStyle)]="{'text-decoration': todo.isDone ? 'line-through' : '' }">
+				Action:{{todo.action}}
+			</p>
+
+			<button (click)='deleteTodo(todo._id)'>Delete</button>
+		</div>
+	</div>
+</div>

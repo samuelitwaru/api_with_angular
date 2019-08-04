@@ -6,16 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { RouterModule } from '@angular/router'
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent
+    TodosComponent,
   ],
   imports: [
     HttpModule,
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot([
       {path:'', redirectTo:'todos', pathMatch:'full'},
       {path:'todos', component:TodosComponent}

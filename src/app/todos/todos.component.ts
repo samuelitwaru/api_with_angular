@@ -8,7 +8,7 @@ import { TodosService } from '../todos.service';
 })
 export class TodosComponent implements OnInit {
 	
-	todos: any = [];
+	todos = [{"action":"write more code","isDone":false,"_id":"87ee78836a739d9278492x9s9093234"},{"action":"help the old lady","isDone":false,"_id":"899ss9se90900etrtr9090076nn3nn34"},{"action":"study","isDone":true,"_id":"nncg23353nnk3421214513n1kjg1jk34"}];
 	todo: any;
 	action: any;
 	name: any;
@@ -18,7 +18,7 @@ export class TodosComponent implements OnInit {
 
   ngOnInit() {
   	this.todoService.getTodos().subscribe(todos => {
-  		this.todos = todos;
+  		//this.todos = todos;
   	})
   }
 
